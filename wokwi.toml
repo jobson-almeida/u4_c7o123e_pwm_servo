@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-firmware = 'build/pwm_tarefa.uf2'
-elf = 'build/pwm_tarefa.elf' 
+firmware = 'build/pwm_servo.uf2'
+elf = 'build/pwm_servo.elf' 
