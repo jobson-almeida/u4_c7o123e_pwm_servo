@@ -74,6 +74,9 @@ int main()
     }
     sleep_ms(5000);
 
+    // define novo passo de 5 microsegundos ao ciclo contínuo
+    step_size = (5 * wrap) / 20000; // 20ms
+
     while (true)
     {
         // ciclo de 0 -> 180 graus
