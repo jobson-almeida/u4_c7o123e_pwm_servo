@@ -76,7 +76,20 @@ int main()
 
     while (true)
     {
-        printf("Hello, world!\n");
-        sleep_ms(1000);
+        // ciclo de 0 -> 180 graus
+        for (uint16_t level = starting_position; level <= degrees180; level += step_size)
+        {
+            pwm_set_chan_level(slice_num, PWM_CHAN_A, level);
+            //   printf("%d\n", level);
+            level_current = level;
+            sleep_ms(10);
+        }
+        // ciclo de 180 -> 0 graus
+        for (uint16_t level = level_current; level > starting_position; level -= step_size)
+        {
+            pwm_set_chan_level(slice_num, PWM_CHAN_A, level);
+            //  printf("%d\n", level);
+            sleep_ms(10);
+        }
     }
 }
