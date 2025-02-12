@@ -40,6 +40,7 @@ int main()
     // ciclo de trabalho
     uint16_t degrees180 = (uint16_t)(0.12 * (wrap + 1));  // 180 graus
     uint16_t degrees90 = (uint16_t)(0.0735 * (wrap + 1)); // 90 graus
+    uint16_t degree0 = (uint16_t)(0.025 * (wrap + 1));    // 0 grau
 
     sleep_ms(100); // pausa para reposicionamento do servo motor
 
@@ -58,6 +59,16 @@ int main()
     {
         pwm_set_chan_level(slice_num, PWM_CHAN_A, level);
         // printf("%d\n", level);
+        level_current = level;
+        sleep_ms(5);
+    }
+    sleep_ms(5000);
+
+    // ciclo de 90 -> 0 graus
+    for (uint16_t level = level_current; level > degree0; level -= step_size)
+    {
+        pwm_set_chan_level(slice_num, PWM_CHAN_A, level);
+        //  printf("%d\n", level);
         level_current = level;
         sleep_ms(5);
     }
