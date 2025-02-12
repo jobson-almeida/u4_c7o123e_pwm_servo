@@ -32,21 +32,29 @@ int main()
     // uint16_t wrap_calculate = (freq_clk_sys * (divider + 0 / 16)) / FREQ_PWM; // DEBBUGING: valor funcional mas não ajustado
     // printf("%d\n", wrap_calculate);
 
-
-
     uint16_t starting_position = 260; // variável auxiliar que reperesenta a posição inicial dos ciclos - valor experimentado e ajustado
-    int step_size = 10; // passo de incremento
-    int level = starting_position; 
+    int step_size = 10;               // passo de incremento
+    int level = starting_position;
     uint16_t level_current = starting_position;
 
     // ciclo de trabalho
-    uint16_t degrees180 = (uint16_t)(0.12 * (wrap + 1)); // 180 graus
+    uint16_t degrees180 = (uint16_t)(0.12 * (wrap + 1));  // 180 graus
     uint16_t degrees90 = (uint16_t)(0.0735 * (wrap + 1)); // 90 graus
 
-    sleep_ms(100); // pausa para reposicionamento do servo motor 
+    sleep_ms(100); // pausa para reposicionamento do servo motor
 
     // ciclo de 0 -> 180 graus
     for (uint16_t level = degrees90; level <= degrees180; level += step_size)
+    {
+        pwm_set_chan_level(slice_num, PWM_CHAN_A, level);
+        // printf("%d\n", level);
+        level_current = level;
+        sleep_ms(5);
+    }
+    sleep_ms(5000);
+
+    // ciclo de 180 -> 90 graus
+    for (uint16_t level = level_current; level > degrees90; level -= step_size)
     {
         pwm_set_chan_level(slice_num, PWM_CHAN_A, level);
         // printf("%d\n", level);
