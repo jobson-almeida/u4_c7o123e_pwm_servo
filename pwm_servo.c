@@ -15,7 +15,7 @@ int main()
     float freq_clk_sys = clock_get_hz(clk_sys);         // retorna a frequencia de clock do sistema (Hz)
 
     // contatdor - também conhecimo com o TOP
-    uint16_t wrap = 58304; // - melhor ajuste até o momento ajustado e experimentado
+    uint16_t wrap = 9950; // - melhor ajuste até o momento ajustado e experimentado
 
     float divider = freq_clk_sys / (50.0f * (wrap + 1)); // define frequência de 50Hz e o divisor do clock
     pwm_set_clkdiv(slice_num, divider);                  // aplica o divisor
@@ -34,7 +34,7 @@ int main()
 
 
 
-    uint16_t starting_position = 240; // variável auxiliar que reperesenta a posição inicial dos ciclos - valor experimentado e ajustado
+    uint16_t starting_position = 260; // variável auxiliar que reperesenta a posição inicial dos ciclos - valor experimentado e ajustado
     int step_size = 10; // passo de incremento
     int level = starting_position; 
     uint16_t level_current = starting_position;
