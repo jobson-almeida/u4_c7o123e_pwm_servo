@@ -1,1 +1,8 @@
-# u4_c7o123e_pwm_servo
+# PWM (Modulação por Largura de Pulso)
+
+Embora tivesse conhecimento da sua existência, seu impacto é uma descoberta, particularmente, inexplorado por mim. Além de tentar entendêa - PWM - busquei nessa proposta não só curiosidade, mas de ter algum entendimento do proposta de estudo a mim apresentada. Mais uma demonstração do poder e das possibilidades que a eletrônica em conjunto com a programação é capaz de realizar. Dito isso, falar em PWM não posso deixar de falar sobre o **duty cycle** - à **proporção do tempo em que um sinal está em nível alto (ativo) em relação ao período total do sinal**. Explicando de uma outra forma, trata-se da porcentagem do tempo em que um sinal está "ligado" - o tON - durante um ciclo.
+
+Foi nesse sentindo que procurei realizar os expirentos propostos, replicando conceitos e aplicando o conhecimento a mim compartilhado. Param essa experiência utilizei de um servomotor microcontrolado pelo Raspbery Pi PIco W, por meio do VSCode, em ambiente simulado do Wokwi. Os exercécios praticados e resultados obeservados foram realcionados a manipulação do braço do servomotor, em diferentes ângulos e movimentos, rápidos e lentos, numa demonstração de fluidez e aglidade em seus movimentos, para uso nas mais diversas sistuações. Perante os conceitos e recursos embarcados em tal tecnologia, como duty cycles dinâmicos que proporcionaram tais efeito, acredito ter sido satisfatório e estimulante à um recém chegado.
+
+
+Confira o trabalho do duty cycle e alguns dos recursos do PWM embarcados no Pico SDK, um pequeno exemplo daquilo que pode ser realizado, com um LED: [https://youtu.be/1SJASxRy-Uc](https://youtu.be/1SJASxRy-Uc)
