@@ -4,6 +4,3 @@ Embora tivesse conhecimento da sua existência, seu impacto é uma descoberta, p
 
 Foi nesse sentido que procurei realizar os expirimentos propostos, replicando conceitos e aplicando o conhecimento a mim compartilhado. Para essa experiência utilizei de um servomotor microcontrolado pelo Raspbery Pi PIco W, por meio do VSCode, em ambiente simulado do Wokwi. Os exercícios praticados e resultados observados foram relacionados a manipulação do braço do servomotor, em diferentes ângulos e movimentos, rápidos e lentos, na flexibilidade da fluidez e aglidade dos movimentos possíveis, para uso nas mais diversas situações. 
 Perante os conceitos e recursos embarcados em tal tecnologia, como duty cycles dinâmicos que proporcionaram tais efeitos, acredito ter sido satisfatório e estimulante à um recém chegado.
-
-
-Confira o trabalho do duty cycle e alguns dos recursos do PWM embarcados no Pico W e um pequeno exemplo daquilo que pode ser realizado, com um LED: [https://youtu.be/1SJASxRy-Uc](https://youtu.be/1SJASxRy-Uc)
